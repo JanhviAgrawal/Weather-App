@@ -4,10 +4,10 @@ A responsive and interactive React application that fetches and displays real-ti
 
 ## 📸 Screenshots
 
-![Weather Dashboard Main Page](../Weather-api-react/public/screenshot-1.png)
+![Weather Dashboard Main Page](./public/screenshot-1.png)
 *Figure 1: Weather Dashboard & Search Functionality*
 
-![Weather Detail Page](../Weather-api-react//public/screenshot-2.png)
+![Weather Detail Page](./public/screenshot-2.png)
 *Figure 2: Detailed Weather Information Route*
 
 ## 🚀 Objective
