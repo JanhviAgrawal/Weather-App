@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# ⛅ React Weather Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive React application that fetches and displays real-time weather information using the OpenWeather API. Users can search for specific cities and view detailed meteorological data.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Weather Dashboard Main Page](../Weather-api-react/public/screenshot-1.png)
+*Figure 1: Weather Dashboard & Search Functionality*
 
-## React Compiler
+![Weather Detail Page](../Weather-api-react//public/screenshot-2.png)
+*Figure 2: Detailed Weather Information Route*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Objective
+Create a React Weather Dashboard Application that fetches and displays weather information. Users can easily search for cities and view detailed weather metrics.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Weather Dashboard Page
+Displays weather information in clean, readable cards. Each card includes:
+- 🌤️ Weather Icon
+- 🏙️ City Name & Country
+- 🌡️ Temperature
+- ☁️ Weather Condition
+- 💧 Humidity
+- 💨 Wind Speed
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2. Search Functionality
+A built-in search box to fetch weather data dynamically based on user input. 
+*Examples to try: Surat, Ahmedabad, Mumbai, Delhi.*
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 3. Detailed Weather Page
+Utilizes **React Router** to navigate to a dedicated detail page.
+- **Route:** `/weather/:city`
+- **Displays:**
+  - City Name & Country
+  - Current Temperature, Minimum & Maximum Temperature
+  - Feels Like Temperature
+  - Humidity & Pressure
+  - Wind Speed
+  - Sunrise & Sunset Times
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 4. UI/UX Handlers
+- **Loading State:** Displays `Loading...` while the API fetches data.
+- **Error Handling:** Gracefully handles failed API calls or invalid cities by displaying `Failed to fetch data`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
+- **Frontend:** React.js, React Router
+- **API:** [OpenWeatherMap API](https://openweathermap.org/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+- Node.js installed
+- OpenWeather API Key
